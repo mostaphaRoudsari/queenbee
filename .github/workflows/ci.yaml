@@ -54,6 +54,9 @@ jobs:
       - name: install semantic-release
         run:
           npm install @semantic-release/exec
+      - name: generate queenbee schemas
+        run:
+          python ./gen_schemas.py
       - name: run semantic release
         run:
           npx semantic-release
